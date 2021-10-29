@@ -13,8 +13,8 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   // Solution code here...
-  let newArr = people.map(item =>{
-    return (item.firstName +' '+ item.lastName)
+  let newArr = people.map(item=>{
+    return item.firstName +' '+ item.lastName
   })
   return newArr
 };
@@ -28,11 +28,10 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
-  let newArr = arr.reduce((acc,val)=>{
-    acc = acc +val
-return acc
+  let tot = arr.reduce((acc,item)=>{
+     return acc+item
   },0)
-  return newArr
+  return tot
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -49,11 +48,10 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
-  let newArr = arr.reduce((acc,val)=>{
-    acc = acc +val.purchasePrice
-    return acc
+  let tot = arr.reduce((acc,item)=>{
+    return acc + item.purchasePrice
   },0)
-  return newArr
+  return tot
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,11 +64,12 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
-  let newArr = arr.reduce((acc,val,index)=>{
-acc =  index 
-return acc +1
-  })
-  return newArr
+
+  
+    let tot = arr.reduce((acc,item)=>{
+           return acc+1
+    },0)
+    return tot
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -131,12 +130,11 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
-
-  let newArr = arr.reduce((acc,val)=>{
-acc.push(val.name)
-return acc
+  let newArr = arr.reduce((acc,item)=>{
+ acc.push(item.name)
+ return acc
   },[])
-  return newArr
+   return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -149,13 +147,13 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
-
-let arr = str.split('')
-let newArr = arr.reduce((rev, char) =>{
-  return char+rev 
-})
-return newArr
-
+  let newArr = str.split('')
+  let reverseArr = newArr.reduce((acc,item)=>{
+     acc.unshift(item);
+     return acc 
+  },[])
+ let reverseString  = reverseArr.join('')
+ return reverseString
 };
 
 /* ------------------------------------------------------------------------------------------------
