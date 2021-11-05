@@ -1,6 +1,6 @@
 # Code Challenge 2 
 
-![img](Whiteboard (1).png)
+![img](Whiteboard.png)
 
 ## Code 
 
@@ -40,5 +40,5 @@ function insertShiftArray (array , num){
    }
   
  } return newArr
- 
+
   }
