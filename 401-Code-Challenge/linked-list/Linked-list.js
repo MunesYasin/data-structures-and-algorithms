@@ -14,7 +14,7 @@ class LinkedList{
     let newNode = new Node(value); 
     newNode.next = this.head; 
     this.head = newNode; 
-    
+
   }
 
   includes(value){ 
@@ -46,14 +46,17 @@ return false
   }
 
   append(newValue) {
-    const newNode = new Node(newValue);
+    if (!this.head){
+     this.head = new Node(newValue);}
+else{
     let currentNode = this.head;
     while (currentNode.next !== null) {
       currentNode = currentNode.next;
     }
-    currentNode.next = newNode;
+    let neww = new Node(newValue)
+    currentNode.next = neww;
   }
-
+}
   
 }
 

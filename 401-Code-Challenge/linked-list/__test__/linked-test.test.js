@@ -30,7 +30,7 @@ describe('Linked List', () => {
   
   it('Should add a node at the end of the list', () => {
     const list = new LinkedList();
-      list.insert('one');
+      list.append('one');
       list.insert('two');
       list.insert('three');
       list.append('test')
