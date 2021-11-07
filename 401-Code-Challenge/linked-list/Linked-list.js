@@ -14,18 +14,22 @@ class LinkedList{
     let newNode = new Node(value); 
     newNode.next = this.head; 
     this.head = newNode; 
+    
   }
 
   includes(value){ 
-    let current = this.head; 
-    if(current.value === value){
-    return true,
-    current = this.head.next,
-    current = current.next
-    }else{
-      return false
+    if (!this.head) {
+      return false;
     }
-
+    let current = this.head; 
+   while(current.next){
+     if (current.value === value){
+       return true 
+     }else{
+       current=current.next
+     }
+   }
+return false
 
   }
 
@@ -48,37 +52,9 @@ class LinkedList{
       currentNode = currentNode.next;
     }
     currentNode.next = newNode;
-    newNode.next = null;
   }
 
-  insertBefore(givenValue, newValue) {
-    if(this.head === null) return false;
-    const newNode = new Node(newValue);
-    let currentNode = this.head;
-    if(currentNode.value === givenValue) {
-      newNode.next = currentNode;
-      newNode = this.head;
-    }
-    let nextNode = currentNode.next;
-    while (nextNode.value !== givenValue) {
-      currentNode = currentNode.next;
-      nextNode = nextNode.next;
-    }
-    currentNode.next = newNode;
-    newNode.next = nextNode;
-  }
-  insertAfter(givenValue, newValue) {
-    if(this.head === null) return false;
-    const newNode = new Node(newValue);
-    let currentNode = this.head;
-    let nextNode = currentNode.next;
-    while(currentNode.value !== givenValue) {
-      currentNode = currentNode.next;
-      nextNode = nextNode.next;
-    }
-    currentNode.next = newNode;
-    newNode.next = nextNode;
-  }
+  
 }
 
 module.exports = LinkedList;
