@@ -106,15 +106,7 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  // Solution code here...
-  let regex1 = /@/g
-  let test1 = regex1.test(email)
-  if(test1){
-           let newArr = email.split('@')
-           if(newArr[0])
-  }else{
-    return false
-  }
+
 };
 
 /* ------------------------------------------------------------------------------------------------
