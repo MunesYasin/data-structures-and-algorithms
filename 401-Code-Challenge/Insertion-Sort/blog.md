@@ -1,7 +1,7 @@
 # Insertion Sort 
 
 ## UML
-! [img](Whiteboard.png)
+![img](Whiteboard.png)
 
 ## Test
 
